@@ -35,7 +35,7 @@ export default function LoginForm() {
     },
     validationSchema: LoginSchema,
     onSubmit: () => {
-      navigate('/dashboard', { replace: true });
+      navigate('/dashboard/user', { replace: true });
     }
   });
 
@@ -85,7 +85,7 @@ export default function LoginForm() {
             label="Remember me"
           />
 
-          <Link component={RouterLink} variant="subtitle2" to="#" underline="hover">
+          <Link component={RouterLink} variant="subtitle2" to="#" underline="hover" color={"#FF0000"}>
             Forgot password?
           </Link>
         </Stack>
@@ -96,6 +96,7 @@ export default function LoginForm() {
           type="submit"
           variant="contained"
           loading={isSubmitting}
+          color="error"
         >
           Login
         </LoadingButton>
